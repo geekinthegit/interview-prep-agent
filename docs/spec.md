@@ -1,0 +1,61 @@
+# Interview Practice Agent Specification
+
+## Purpose
+
+This agent helps the user prepare for a graduate admissions interview about the coding-manual-ablation study. It asks questions about the study. It then checks each answer against the research records and gives feedback with the source location.
+
+## Source documents
+
+The files in `source_docs/` are the only sources. The commit they were copied from is recorded in `source_docs/SOURCE.txt`.
+
+- `README.md`
+- `DECISIONS.md` and `decisions/`
+- `AI_WORKFLOW.md`
+- `docs/research-workflow.md` and `docs/ai-assisted-workflow.md`
+- `reports/main-scoring-record-2026-09-24.md`
+- `reports/heldout-evaluation-decision-2026-09-24.md`
+- The application introduction
+
+The final research report is not included. It will be added after it is revised.
+
+## Question types
+
+- Fixed questions come from a question bank file written by the user. Each question is paired with a source location.
+- Generated questions are created by the agent from one section of a source document. That section is the source location.
+
+## Session flow
+
+1. Scope selection. The user chooses all documents or one document. The user also chooses fixed questions only or fixed and generated questions.
+2. Question. The agent asks one question. Each question has a source location in the form `file#anchor`. The location stays hidden until the user answers.
+3. Answer. The user answers in their own words.
+4. Record check. The agent splits the answer into claims and classifies each claim.
+5. Feedback. The agent reports the label of each claim with its source location. Feedback is given after every answer.
+6. Follow-up. The agent asks at most one follow-up question per question. Then it returns to step 2.
+7. Session summary. When the user ends the session the agent lists each question with its claim labels. It also lists the sections the user should reread.
+
+## Claim labels
+
+Each claim receives one of three labels.
+
+- Consistent with the record. A source section states the same content.
+- Inconsistent with the record. A source section states different content.
+- Not in the record. No source section states this content.
+
+A claim that goes beyond a claim boundary statement in section 12 of `reports/main-scoring-record-2026-09-24.md` is labeled Not in the record. The feedback also cites the identifier of that statement.
+
+## Rules for the agent
+
+- The agent does not fill gaps by guessing.
+- If the agent cannot find a source section it says so.
+- Every source location must point to a section that exists in `source_docs/`.
+
+## API
+
+- The provider is OpenAI.
+- The agent reads the key only from the environment variable `OPENAI_API_KEY_ABLATION`. It passes the key to the client explicitly. It never reads `OPENAI_API_KEY`.
+
+## Not yet decided
+
+- Model
+- Interface (Streamlit web app or terminal)
+- How documents are split into sections and how sections are retrieved
