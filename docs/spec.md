@@ -14,7 +14,7 @@ The files in `source_docs/` are the only sources. The commit they were copied fr
 - `docs/research-workflow.md` and `docs/ai-assisted-workflow.md`
 - `reports/main-scoring-record-2026-09-24.md`
 - `reports/heldout-evaluation-decision-2026-09-24.md`
-- The application introduction
+- `Coding-Manual-Replacement_Project-Summary_Jiwon-Choi.md` (the application introduction)
 
 The final research report is not included. It will be added after it is revised.
 
