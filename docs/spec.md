@@ -37,11 +37,18 @@ The final research report is not included. It will be added after it is revised.
 
 Each claim receives one of three labels.
 
-- Consistent with the record. A source section states the same content.
-- Inconsistent with the record. A source section states different content.
-- Not in the record. No source section states this content.
+- Consistent with the record. A checked section states the same content.
+- Inconsistent with the record. A checked section states different content.
+- Not in the record. No checked section states this content.
 
 A claim that goes beyond a claim boundary statement in section 12 of `reports/main-scoring-record-2026-09-24.md` is labeled Not in the record. The feedback also cites the identifier of that statement.
+
+## Sections and retrieval
+
+- Each source document is split at Markdown headings (`#`, `##`, `###`). Each section's anchor follows GitHub's anchor rule for that heading.
+- The record check uses the question's source section and the top 3 other sections found by keyword search on the answer.
+- If no other section matches, the record check uses the question's source section only.
+- The feedback always lists the sections used for the check. Not in the record means the claim was not found in those sections.
 
 ## Rules for the agent
 
@@ -49,13 +56,17 @@ A claim that goes beyond a claim boundary statement in section 12 of `reports/ma
 - If the agent cannot find a source section it says so.
 - Every source location must point to a section that exists in `source_docs/`.
 
-## API
+## Agent structure
 
-- The provider is OpenAI.
+The app calls the model in a fixed sequence. It does not use a tool-calling loop.
+
+## Model and API
+
+- Provider: OpenAI
+- Model: `gpt-5.5-2026-04-23`, the snapshot used in the research
 - The agent reads the key only from the environment variable `OPENAI_API_KEY_ABLATION`. It passes the key to the client explicitly. It never reads `OPENAI_API_KEY`.
 
-## Not yet decided
+## Interface
 
-- Model
-- Interface (Streamlit web app or terminal)
-- How documents are split into sections and how sections are retrieved
+- Streamlit chat interface run locally.
+- Streamlit reruns the script on every interaction. A model response is stored once it is received. It is never requested again on a rerun.
