@@ -20,7 +20,7 @@ The final research report is not included. It will be added after it is revised.
 
 ## Question types
 
-- Fixed questions come from a question bank file written by the user. Each question is paired with a source location.
+- Fixed questions come from `question_bank.md`. Each question is paired with one or more source locations. Multiple locations are separated by ` ; `.
 - Generated questions are created by the agent from one section of a source document. That section is the source location.
 
 ## Session flow
@@ -46,8 +46,9 @@ A claim that goes beyond a claim boundary statement in section 12 of `reports/ma
 ## Sections and retrieval
 
 - Each source document is split at Markdown headings (`#`, `##`, `###`). Each section's anchor follows GitHub's anchor rule for that heading.
-- The record check uses the question's source section and the top 3 other sections found by keyword search on the answer.
-- If no other section matches, the record check uses the question's source section only.
+- Source locations come only from this section index. Links inside the source documents are not followed.
+- The record check uses the question's source sections and the top 3 other sections found by keyword search on the answer.
+- If no other section matches, the record check uses the question's source sections only.
 - The feedback always lists the sections used for the check. Not in the record means the claim was not found in those sections.
 
 ## Rules for the agent

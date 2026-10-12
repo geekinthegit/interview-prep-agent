@@ -36,15 +36,15 @@ Follow AGENTS.md throughout all work. Keep unresolved decisions open until the u
 
 2.5 Add these decisions to docs/spec.md and commit. — Completed
 
-## 3. Create the Fixed Question Bank
+## 3. Create the Fixed Question Bank — Completed
 
-3.1 Write the question list, starting with the 10 questions previously discussed.
+3.1 Write the question list, starting with the 10 questions previously discussed. — Completed. 12 questions in question_bank.md.
 
-3.2 Link each question to its supporting source location using filename#anchor.
+3.2 Link each question to its supporting source location using filename#anchor. — Completed. A question may have several locations separated by " ; ".
 
-3.3 Verify that each source location points to the intended section. — Coding workspace, read-only
+3.3 Verify that each source location points to the intended section. — Coding workspace, read-only — Completed
 
-3.4 Commit.
+3.4 Commit. — Completed
 
 ## 4. Implement the App
 
