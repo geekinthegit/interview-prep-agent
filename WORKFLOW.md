@@ -46,7 +46,7 @@ Follow AGENTS.md throughout all work. Keep unresolved decisions open until the u
 
 3.4 Commit. — Completed
 
-## 4. Implement the App
+## 4. Implement the App — Completed
 
 Implementation takes place in the coding workspace. Implementation prompts are prepared in the planning chat.
 
