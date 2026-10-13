@@ -62,7 +62,9 @@ Implementation takes place in the coding workspace. Implementation prompts are p
 
 4.5 Review each completed unit in the planning chat before committing.
 
-## 5. Run Trial Sessions
+## 5. Run Trial Sessions — Completed
+
+Result: The user ran a trial session with 3 fixed questions (4 API calls). Q01: all claims Consistent with the record. Q02, answered incorrectly on purpose: 2 Inconsistent with the record and 1 Not in the record. An answer that exceeds a claim boundary in §12 was not tested.
 
 5.1 Check the expected number of API calls.
 
@@ -72,7 +74,9 @@ Implementation takes place in the coding workspace. Implementation prompts are p
 
 5.4 Compile a list of issues to fix.
 
-## 6. Revise — Coding Workspace
+## 6. Revise — Coding Workspace — Not done (user decision)
+
+Result: No revisions were made. The issues found are listed under Limitations in README.md.
 
 6.1 Fix only the issues identified in Step 5.4.
 
@@ -80,7 +84,9 @@ Implementation takes place in the coding workspace. Implementation prompts are p
 
 6.3 Commit.
 
-## 7. Prepare the Demonstration Video
+## 7. Prepare the Demonstration Video — Completed
+
+Result: The trial session was recorded and used as the demonstration video. The video link is in README.md.
 
 The user will not attend the final presentation. The video is how the app is shown to evaluators.
 
@@ -90,7 +96,7 @@ The user will not attend the final presentation. The video is how the app is sho
 
 ## 8. Submit
 
-8.1 Write the README, covering the purpose, source documents, how to run the app, limitations, and the video link.
+8.1 Write the README, covering the purpose, source documents, how to run the app, limitations, and the video link. — Completed
 
 8.2 Make the final commit and push.
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This agent helps the user prepare for a graduate admissions interview about the coding-manual-ablation study. It asks questions about the study. It then checks each answer against the research records and gives feedback with the source location.
+This agent asks the user questions about the coding-manual-ablation study. The user answers in their own words. The agent checks each answer against the research records and gives feedback with the source location. The goal is to help the user understand the project and explain it accurately.
 
 ## Source documents
 
