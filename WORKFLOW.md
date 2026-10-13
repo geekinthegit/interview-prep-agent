@@ -50,13 +50,15 @@ Follow AGENTS.md throughout all work. Keep unresolved decisions open until the u
 
 Implementation takes place in the coding workspace. Implementation prompts are prepared in the planning chat.
 
-4.1 Implement document section splitting and an anchor index.
+4.0 Check that openai and streamlit are installed in the Python environment. — Completed. openai 3.8.0, streamlit 1.51.0 (/opt/anaconda3/bin/python3, Python 3.13.9).
 
-4.2 Implement question selection using the fixed question bank and document-based generation.
+4.1 Implement document section splitting and an anchor index. — Implemented (prep_agent/sections.py). Revised after the user's decision: sections are split at `#` to `####`, and each section includes its subsections (spec.md updated). All question-bank source locations are in the index.
 
-4.3 Create the prompts for comparing answers with records and generating feedback.
+4.2 Implement question selection using the fixed question bank and document-based generation. — Implemented (prep_agent/questions.py). Generation not run (requires API calls).
 
-4.4 Implement the interface.
+4.3 Create the prompts for comparing answers with records and generating feedback. — Implemented (prep_agent/prompts.py, prep_agent/llm.py). Not run against the model.
+
+4.4 Implement the interface. — Implemented (app.py). Checked with Streamlit AppTest without API calls (no key, and with mocked model functions).
 
 4.5 Review each completed unit in the planning chat before committing.
 

@@ -45,7 +45,9 @@ A claim that goes beyond a claim boundary statement in section 12 of `reports/ma
 
 ## Sections and retrieval
 
-- Each source document is split at Markdown headings (`#`, `##`, `###`). Each section's anchor follows GitHub's anchor rule for that heading.
+- Each source document is split at Markdown headings (`#`, `##`, `###`, `####`). Each section's anchor follows GitHub's anchor rule for that heading.
+- A section runs from its heading to the next heading of the same or a higher level, so it includes its subsections. Both a section and its subsections are in the index, and a source location that points to a section also covers its subsections in the record check.
+- Interviews are practiced in English. Keyword search assumes English answers.
 - Source locations come only from this section index. Links inside the source documents are not followed.
 - The record check uses the question's source sections and the top 3 other sections found by keyword search on the answer.
 - If no other section matches, the record check uses the question's source sections only.
