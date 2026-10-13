@@ -74,7 +74,7 @@ Result: The user ran a trial session with 3 fixed questions (4 API calls). Q01: 
 
 5.4 Compile a list of issues to fix.
 
-## 6. Revise — Coding Workspace — Not done (user decision)
+## 6. Revise — Coding Workspace — Not done (user decision) — Completed
 
 Result: No revisions were made. The issues found are listed under Limitations in README.md.
 
@@ -94,9 +94,9 @@ The user will not attend the final presentation. The video is how the app is sho
 
 7.2 Record the screen.
 
-## 8. Submit
+## 8. Submit — Completed
 
-8.1 Write the README, covering the purpose, source documents, how to run the app, limitations, and the video link. — Completed
+8.1 Write the README, covering the purpose, source documents, how to run the app, limitations, and the video link. 
 
 8.2 Make the final commit and push.
 
