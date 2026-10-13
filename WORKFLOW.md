@@ -74,7 +74,7 @@ Result: The user ran a trial session with 3 fixed questions (4 API calls). Q01: 
 
 5.4 Compile a list of issues to fix.
 
-## 6. Revise — Coding Workspace — Not done (user decision) — Completed
+## 6. Revise — Coding Workspace — Not done (user decision)
 
 Result: No revisions were made. The issues found are listed under Limitations in README.md.
 
